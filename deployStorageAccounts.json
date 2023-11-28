@@ -34,9 +34,7 @@
       "name": "[concat(parameters('storageAccountNamePrefix'),'1')]",
       "apiVersion": "2022-09-01",
       "location": "[parameters('location')]",
-      "properties": {
-        "accountType": "[parameters('storageAccountType')]"
-      }
+      "properties": {}
     },
     {
       "type": "Microsoft.Storage/storageAccounts",
@@ -47,9 +45,7 @@
       "name": "[concat(parameters('storageAccountNamePrefix'),'2')]",
       "apiVersion": "2022-09-01",
       "location": "[parameters('location')]",
-      "properties": {
-        "accountType": "[parameters('storageAccountType')]"
-      }
+      "properties": {}
     },
     {
       "type": "Microsoft.Storage/storageAccounts",
@@ -60,9 +56,7 @@
       "name": "[concat(parameters('storageAccountNamePrefix'),'3')]",
       "apiVersion": "2022-09-01",
       "location": "[parameters('location')]",
-      "properties": {
-        "accountType": "Standard_LRS"
-      }
+      "properties": {}
     }
   ]
 }
