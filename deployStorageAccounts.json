@@ -27,6 +27,10 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
+      "kind": "Storage",
+      "sku" : {
+        "name": "[parameters('storageAccountType')]"
+      },
       "name": "[concat(parameters('storageAccountNamePrefix'),'1')]",
       "apiVersion": "2022-09-01",
       "location": "[parameters('location')]",
@@ -36,6 +40,10 @@
     },
     {
       "type": "Microsoft.Storage/storageAccounts",
+      "kind": "Storage",
+      "sku" : {
+        "name": "[parameters('storageAccountType')]"
+      },
       "name": "[concat(parameters('storageAccountNamePrefix'),'2')]",
       "apiVersion": "2022-09-01",
       "location": "[parameters('location')]",
@@ -45,6 +53,10 @@
     },
     {
       "type": "Microsoft.Storage/storageAccounts",
+      "kind": "Storage",
+      "sku" : {
+        "name": "[parameters('storageAccountType')]"
+      },
       "name": "[concat(parameters('storageAccountNamePrefix'),'3')]",
       "apiVersion": "2022-09-01",
       "location": "[parameters('location')]",
