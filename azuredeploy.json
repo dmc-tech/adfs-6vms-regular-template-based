@@ -73,6 +73,13 @@
       },
       "defaultValue": "10.0.1.0/24"
     },
+    "bastionSubnetAddressRange": {
+      "type": "string",
+      "metadata": {
+        "description": "The address range of the dmz subnet, which contains the Windows application proxy servers, mandatory if creating a new virtual network."
+      },
+      "defaultValue": "10.0.2.0/26"
+    },
     "dmzSubnetName": {
       "type": "string",
       "metadata": {
@@ -187,7 +194,7 @@
     }
   },
   "variables": {
-    "baseUrl": "https://raw.githubusercontent.com/paulomarquesc/adfs-6vms-regular-template-based/master/",
+    "baseUrl": "https://raw.githubusercontent.com/dmc-tech/adfs-6vms-regular-template-based/master/",
     "storageAccountNamePrefix": "[concat(uniquestring(resourceGroup().id),'sa')]",
     "deployStorageAccountsUrl": "[concat(variables('baseUrl'),'/deployStorageAccounts.json')]",
     "deployPublicIPsUrl": "[concat(variables('baseUrl'),'/deployPublicIPs.json')]",
@@ -217,6 +224,12 @@
           "networkSecurityGroup": {
             "id": "[resourceId('Microsoft.Network/networkSecurityGroups','DMZ-sn-nsg')]"
           }
+        }
+      },
+      {
+        "name": "AzureBastionSubnet",
+        "properties": {
+          "addressPrefix": "[parameters('bastionSubnetAddressRange')]",
         }
       }
     ],
