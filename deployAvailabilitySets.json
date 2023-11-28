@@ -13,7 +13,7 @@
     {
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('availabilitySetNames')[copyIndex()]]",
-      "apiVersion": "2022-09-01",
+      "apiVersion": "2023-03-01",
       "location": "[parameters('location')]",
       "copy": {
         "name":"avsetCopy",
