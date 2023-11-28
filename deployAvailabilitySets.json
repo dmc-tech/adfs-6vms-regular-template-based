@@ -22,7 +22,10 @@
         "name":"avsetCopy",
         "count": 3
       },
-      "properties": {}
+       "properties": {
+        "platformUpdateDomainCount": 2,
+        "platformFaultDomainCount": 2
+      }
     }
   ]
 }
